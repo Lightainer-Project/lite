@@ -20,7 +20,7 @@ class SystemController {
 
     async docker({ request, response }) {
         response.status(200).send(JSON.stringify({
-            containers: await sysinfo.dockerContainers()
+            containers: await sysinfo.dockerInfo()
         }))
     }
 }
